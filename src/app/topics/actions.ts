@@ -5,7 +5,10 @@ import { ActionResponse, ApiResponse, TopicDetail } from "../types";
 import { apiUrl } from "../utils";
 
 export async function getTopics() {
-    const response = await fetch(`${apiUrl}/topics`);
+    const response = await fetch(`${apiUrl}/topics`, {
+        method: "GET",
+        cache: "no-store",
+    });
     const json: ApiResponse<{ topics: TopicDetail[] }> = await response.json();
 
     if (!response.ok || !json.success || !json.data?.topics) {
