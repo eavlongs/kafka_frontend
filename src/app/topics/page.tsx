@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { getTopics } from "./actions";
 import { CreateTopicDialog } from "./CreateTopicDialog";
 import TopicTable from "./TopicTable";
