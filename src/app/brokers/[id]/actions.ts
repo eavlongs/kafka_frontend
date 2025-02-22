@@ -60,5 +60,3 @@ export async function resetConfigAction(id: string) {
     revalidatePath("/brokers/" + id);
     return true;
 }
-
-export const dynamic = "force-dynamic";
