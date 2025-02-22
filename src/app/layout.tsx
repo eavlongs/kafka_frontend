@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic"; // This prevents static building
+export const fetchCache = "force-no-store";
+
 import { Sidebar } from "@/components/custom/sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
