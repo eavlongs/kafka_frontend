@@ -11,9 +11,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Plus } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { createTopic } from "./actions";
-import { usePathname, useRouter } from "next/navigation";
 
 export function CreateTopicDialog() {
     const [open, setOpen] = useState(false);
@@ -45,7 +45,7 @@ export function CreateTopicDialog() {
             return;
         }
 
-        router.refresh();
+        router.push("/topics");
         setOpen(false);
     }
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { deleteTopic } from "./actions";
 import { useRouter } from "next/navigation";
+import { deleteTopic } from "./actions";
 
 export default function DeleteTopicButton({ topic }: { topic: string }) {
     const router = useRouter();
@@ -15,7 +15,7 @@ export default function DeleteTopicButton({ topic }: { topic: string }) {
             return;
         }
 
-        router.refresh();
+        router.push("/topics");
     }
     return (
         <Button variant='destructive' onClick={handleDelete}>
