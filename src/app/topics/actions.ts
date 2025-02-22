@@ -18,7 +18,8 @@ export async function getTopics() {
 export async function createTopic(
     topic: string,
     partitions: number,
-    replicationFactor: number
+    replicationFactor: number,
+    pathname: string
 ): Promise<ActionResponse> {
     const response = await fetch(`${apiUrl}/topics`, {
         method: "POST",
@@ -41,7 +42,7 @@ export async function createTopic(
         };
     }
 
-    revalidatePath("/topics");
+    revalidatePath(pathname);
 
     return {
         success: true,

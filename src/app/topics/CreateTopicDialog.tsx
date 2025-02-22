@@ -13,10 +13,12 @@ import { Label } from "@/components/ui/label";
 import { Plus } from "lucide-react";
 import { useRef, useState } from "react";
 import { createTopic } from "./actions";
+import { usePathname } from "next/navigation";
 
 export function CreateTopicDialog() {
     const [open, setOpen] = useState(false);
     const topicRef = useRef<HTMLInputElement>(null);
+    const pathname = usePathname();
     // const partitionsRef = useRef<HTMLInputElement>(null);
     // const replicationFactorRef = useRef<HTMLInputElement>(null);
 
@@ -33,7 +35,8 @@ export function CreateTopicDialog() {
         const resposne = await createTopic(
             topic,
             partitions,
-            replicationFactor
+            replicationFactor,
+            pathname
         );
 
         if (!resposne.success) {
