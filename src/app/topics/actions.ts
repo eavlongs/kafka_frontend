@@ -38,7 +38,7 @@ export async function createTopic(
     if (!response.ok || !json.success) {
         return {
             success: false,
-            message: json.message,
+            message: json.message || "Something went wrong",
         };
     }
 
