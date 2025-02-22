@@ -25,15 +25,6 @@ export function Sidebar() {
                             <span>Topics</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link
-                            href='/consumers'
-                            className='flex items-center space-x-2 p-2 rounded hover:bg-gray-700'
-                        >
-                            <Users size={20} />
-                            <span>Consumers</span>
-                        </Link>
-                    </li>
                 </ul>
             </nav>
         </div>
