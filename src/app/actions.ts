@@ -15,3 +15,5 @@ export async function getBrokers() {
 
     return json.data.nodes;
 }
+
+export const dynamic = "force-dynamic";
