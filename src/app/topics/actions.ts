@@ -26,6 +26,9 @@ export async function createTopic(
 ): Promise<ActionResponse> {
     const response = await fetch(`${apiUrl}/topics`, {
         method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
         body: JSON.stringify({
             topic,
             partitions,
