@@ -45,7 +45,6 @@ export function CreateTopicDialog() {
             return;
         }
 
-        window.location.href = "/topics";
         setOpen(false);
     }
 

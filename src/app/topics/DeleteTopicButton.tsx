@@ -14,8 +14,6 @@ export default function DeleteTopicButton({ topic }: { topic: string }) {
             alert(response.message);
             return;
         }
-
-        window.location.href = "/topics";
     }
     return (
         <Button variant='destructive' onClick={handleDelete}>
