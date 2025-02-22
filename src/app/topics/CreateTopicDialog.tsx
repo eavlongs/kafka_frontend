@@ -17,22 +17,18 @@ import { createTopic } from "./actions";
 export function CreateTopicDialog() {
     const [open, setOpen] = useState(false);
     const topicRef = useRef<HTMLInputElement>(null);
-    const partitionsRef = useRef<HTMLInputElement>(null);
-    const replicationFactorRef = useRef<HTMLInputElement>(null);
+    // const partitionsRef = useRef<HTMLInputElement>(null);
+    // const replicationFactorRef = useRef<HTMLInputElement>(null);
 
     async function handleSubmit() {
-        if (
-            !topicRef.current ||
-            !partitionsRef.current ||
-            !replicationFactorRef.current
-        ) {
+        if (!topicRef.current) {
             alert("Please fill in all fields");
             return;
         }
 
         const topic = topicRef.current.value;
-        const partitions = parseInt(partitionsRef.current.value);
-        const replicationFactor = parseInt(replicationFactorRef.current.value);
+        const partitions = 6;
+        const replicationFactor = 3;
 
         const resposne = await createTopic(
             topic,
@@ -74,7 +70,7 @@ export function CreateTopicDialog() {
                             required
                         />
                     </div>
-                    <div className='space-y-2'>
+                    {/* <div className='space-y-2'>
                         <Label htmlFor='partitions'>Partitions</Label>
                         <Input
                             id='partitions'
@@ -107,7 +103,7 @@ export function CreateTopicDialog() {
                             }}
                             required
                         />
-                    </div>
+                    </div> */}
                     <Button
                         type='button'
                         className='w-full'
