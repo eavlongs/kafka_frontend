@@ -23,3 +23,5 @@ export default async function Page({
         </PageWrapper>
     );
 }
+
+export const dynamic = "force-dynamic";

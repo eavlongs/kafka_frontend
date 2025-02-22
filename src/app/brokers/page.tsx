@@ -10,3 +10,5 @@ export default async function Home() {
         </PageWrapper>
     );
 }
+
+export const dynamic = "force-dynamic";

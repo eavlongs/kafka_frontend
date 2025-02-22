@@ -12,3 +12,5 @@ export default async function Page({
 
     return <TopicClientPage topic={topic} partitions={partitions} />;
 }
+
+export const dynamic = "force-dynamic";
