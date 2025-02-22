@@ -45,7 +45,7 @@ export function CreateTopicDialog() {
             return;
         }
 
-        router.push("/topics");
+        window.location.href = "/topics";
         setOpen(false);
     }
 

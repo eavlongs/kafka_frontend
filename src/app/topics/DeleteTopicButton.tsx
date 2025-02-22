@@ -15,7 +15,7 @@ export default function DeleteTopicButton({ topic }: { topic: string }) {
             return;
         }
 
-        router.push("/topics");
+        window.location.href = "/topics";
     }
     return (
         <Button variant='destructive' onClick={handleDelete}>
